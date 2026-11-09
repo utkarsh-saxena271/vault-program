@@ -23,6 +23,7 @@ pub struct Initialize<'info> {
     pub vault_state: Account<'info, VaultState>,
 
     #[account(
+        mut,
         seeds = [VAULT_SEED, user.key().as_ref()],
         bump
     )]
